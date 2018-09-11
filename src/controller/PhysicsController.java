@@ -49,6 +49,7 @@ public class PhysicsController
 		System.out.println("| Back                   |");
 		System.out.println(" -----------------------");
 		String have = weightScanner.nextLine();
+		have = have;
 		if (have.equals("I"))
 			{
 			
@@ -73,13 +74,13 @@ public class PhysicsController
 				String poundsToo = PandO.nextLine();
 				
 				if (poundsToo.equals("Back"))
-				{
-					have.equals("I");
-					weightConversion();
+					{
 					
+					weightConversion();
+					have.equals("I");
+					}
 				}
-				}
-			if (typeI.equals("Ounces"))
+			if (typeI.equals("O"))
 			{
 			String ouncesToo = weightScanner.nextLine();
 			System.out.println("What are you trying to find?");

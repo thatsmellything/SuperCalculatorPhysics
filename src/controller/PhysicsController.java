@@ -22,20 +22,7 @@ public class PhysicsController
 		{
 			weightConversion();
 		}
-		if (answer.equals("PE"))
-		{
-			pEnergy();
-		}
-		
-		if (answer.equals("KE"))
-		{
-			kEnergy();
-		}
-		
-		if (answer.equals("NE"))
-		{
-			nEnergy();
-		}
+
 		inputScanner.close();
 	}
 	
@@ -49,10 +36,19 @@ public class PhysicsController
 		System.out.println("| Back                   |");
 		System.out.println(" -----------------------");
 		String have = weightScanner.nextLine();
-		have = have;
+	
+		
 		if (have.equals("I"))
 			{
-			
+			Imperial();
+			}
+		if(have.equals("Back"))
+		{
+			start();
+		}
+	}
+		public void Imperial()
+		{
 			System.out.println("Pounds or Ounces?");
 			System.out.println(" --------");
 			System.out.println("| Pounds |");
@@ -64,58 +60,87 @@ public class PhysicsController
 			String typeI = PandO.nextLine();
 			if (typeI.equals("P"))
 				{
-
+				Pounds2();
+				}
+			if (typeI.equals("O"))
+			{
+				Ounces2();
+			}
+			if (typeI.equals("Back"))
+			{
+				weightConversion();
+			}
+			PandO.close();
+			{
+			}
+		}
+			public void Ounces2()
+			{
+				Scanner O2 = new Scanner(System.in);
 				System.out.println("What are you trying to find?");
 				System.out.println(" -----------------------");
 				System.out.println("| Imperial (lbs, ounces) |");
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
-				String poundsToo = PandO.nextLine();
+				String ouncesToo = O2.nextLine();
+				if (ouncesToo.equals("I"))
+				{
+					O2I();
+				}
+				if (ouncesToo.equals("M"))
+				{
+					O2M();
+				}
+				if (ouncesToo.equals("Back"))
+				{
+					Imperial();
+				}
+			}
+			public void Pounds2()
+
+			{
+				Scanner P2 = new Scanner(System.in);
+				System.out.println("What are you trying to find?");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				String poundsToo = P2.nextLine();
 				
 				if (poundsToo.equals("Back"))
 					{
-					
-					weightConversion();
-					have.equals("I");
+					Imperial();
 					}
+				if (poundsToo.equals("I"))
+				{
+					P2I();
 				}
-			if (typeI.equals("O"))
-			{
-			String ouncesToo = weightScanner.nextLine();
-			System.out.println("What are you trying to find?");
-			System.out.println(" -----------------------");
-			System.out.println("| Imperial (lbs, ounces) |");
-			System.out.println("| Metric (kg, grams, mg) |");
-			System.out.println("| Back                   |");
-			System.out.println(" -----------------------");
+				if (poundsToo.equals("M"))
+				{
+					P2M();
+				}
+				
 			}
-			if(typeI.equals("Back"))
-			{
-				weightConversion();
-			}
-			PandO.close();
-			}
-		if(have.equals("Back"))
-		{
-			start();
-		}
-		
-		weightScanner.close();
-	}
-
-	public void pEnergy()
-	{
-		
-	}
-	
-	public void kEnergy()
-	{
-		
-	}
-	
-	public void nEnergy()
-	{
-		
-	}
+				public void O2I()
+				{
+					
+				}
+				public void O2M()
+				{
+					
+				}
+				public void P2I()
+				{
+					
+				}
+				public void P2M()
+				{
+					
+				}
 }
+
+		
+
+

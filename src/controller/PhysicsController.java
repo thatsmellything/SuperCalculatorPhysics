@@ -43,15 +43,242 @@ public class PhysicsController
 			{
 			Imperial();
 			}
+		if (have.equals("M"))
+		{
+			Metric();
+		}
 		if(have.equals("B"))
 		{
 			start();
 		}
 		weightScanner.close();
 	}
+		public void Metric()
+		{
+			System.out.println("What do you have?");
+			System.out.println(" ------------");
+			System.out.println("| Kilograms  |");
+			System.out.println("| Grams      |");
+			System.out.println("| Milligrams |");
+			System.out.println("| Back       |");
+			System.out.println(" ------------");
+			Scanner KGM;
+			KGM = new Scanner(System.in);
+			String typeI = KGM.nextLine();
+			if (typeI.equals("K"))
+			{
+				K2();
+			}
+			if (typeI.equals("G"))
+			{
+				G2();
+			}
+			if (typeI.equals("M"))
+			{
+				M2();
+			}
+			if (typeI.equals("B"))
+			{
+				weightConversion();
+			}
+			KGM.close();
+		}
+			public void K2()
+			{
+				Scanner K2 = new Scanner(System.in);
+				System.out.println("What are you trying to find? (You have Kilos)");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				String Kilo2 = K2.nextLine();
+				if (Kilo2.equals("I"))
+				{
+					K2I();
+				}
+				if (Kilo2.equals("M"))
+				{
+					K2M();
+				}
+				if (Kilo2.equals("B"))
+				{
+					Metric();
+				}
+				K2.close();
+			}
+			public void G2()
+			{
+				Scanner G2 = new Scanner(System.in);
+				System.out.println("What are you trying to find? (You have Grams)");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				String Grams2 = G2.nextLine();
+				if (Grams2.equals("I"))
+				{
+					G2I();
+				}
+				if (Grams2.equals("M"))
+				{
+					G2M();
+				}
+				if (Grams2.equals("B"))
+				{
+					Metric();
+				}
+				G2.close();
+			}
+			public void M2()
+			{
+				Scanner M2 = new Scanner(System.in);
+				System.out.println("What are you trying to find? (You have Milligrams)");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				String Milli2 = M2.nextLine();
+				if (Milli2.equals("I"))
+				{
+					M2I();
+				}
+				if (Milli2.equals("M"))
+				{
+					M2M();
+				}
+				if (Milli2.equals("B"))
+				{
+					Metric();
+				}
+				M2.close();
+			}
+				public void K2I()
+				{
+					
+				}
+				public void M2I()
+				{
+					
+				}
+				public void G2I()
+				{
+					
+				}
+				public void K2M()
+				{
+					System.out.println("Whatare you trying to find? (you have Kilograms)");
+					System.out.println(" ------------");
+					System.out.println("| Grams      |");
+					System.out.println("| Milligrams |");
+					System.out.println("| Back       |");
+					System.out.println(" ------------");
+					Scanner K2;
+					K2 = new Scanner(System.in);
+					//CT = conversion type
+					String CT = K2.nextLine();
+					if (CT.equals("G"))
+					{
+						K2G();
+					}
+					if (CT.equals("M"))
+					{
+						K2Mi();
+					}
+					if (CT.equals("B"))
+					{
+						K2();
+					}
+					
+					
+					K2.close();
+				}
+				public void G2M()
+				{
+					System.out.println("Whatare you trying to find? (You have Grams)");
+					System.out.println(" ------------");
+					System.out.println("| Kilograms  |");
+					System.out.println("| Milligrams |");
+					System.out.println("| Back       |");
+					System.out.println(" ------------");
+					Scanner G2;
+					G2 = new Scanner(System.in);
+					//CT = conversion type
+					String CT = G2.nextLine();
+					if (CT.equals("K"))
+					{
+						G2K();
+					}
+					if (CT.equals("M"))
+					{
+						G2Mi();
+					}
+					if (CT.equals("B"))
+					{
+						G2();
+					}
+					
+					
+					G2.close();
+				}
+				public void M2M()
+				{
+					System.out.println("Whatare you trying to find? (You have Milligrams)");
+					System.out.println(" ------------");
+					System.out.println("| Kilograms  |");
+					System.out.println("| Grams      |");
+					System.out.println("| Back       |");
+					System.out.println(" ------------");
+					Scanner Mi2;
+					Mi2 = new Scanner(System.in);
+					//CT = conversion type
+					String CT = Mi2.nextLine();
+					if (CT.equals("K"))
+					{
+						Mi2K();
+					}
+					if (CT.equals("G"))
+					{
+						Mi2G();
+					}
+					if (CT.equals("B"))
+					{
+						M2();
+					}
+					
+					
+					Mi2.close();
+				}
+					public void K2G()
+					{
+						
+					}
+					public void K2Mi()
+					{
+						
+					}
+					public void G2K()
+					{
+						
+					}
+					public void G2Mi()
+					{
+						
+					}
+					public void Mi2K()
+					{
+						
+					}
+					public void Mi2G()
+					{
+						
+					}
+			
 		public void Imperial()
 		{
-			System.out.println("Pounds or Ounces?");
+			System.out.println("What do you have?");
 			System.out.println(" --------");
 			System.out.println("| Pounds |");
 			System.out.println("| Ounces |");
@@ -98,6 +325,7 @@ public class PhysicsController
 				{
 					Imperial();
 				}
+				O2.close();
 			}
 			public void Pounds2()
 

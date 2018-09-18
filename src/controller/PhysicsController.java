@@ -23,6 +23,18 @@ public class PhysicsController
 		{
 			weightConversion();
 		}
+		if (answer.equals("PE"))
+		{
+			potentialEnergy();
+		}
+		if (answer.equals("KE"))
+		{
+			kineticEnergy();
+		}
+		if (answer.equals("NE"))
+		{
+			netEnergy();
+		}
 
 		inputScanner.close();
 	}
@@ -948,6 +960,26 @@ public class PhysicsController
 						}
 						lbs.close();
 					}
+					
+					
+					
+	public void potentialEnergy()
+	{
+		
+	}
+	
+	
+	
+	public void kineticEnergy()
+	{
+		
+	}
+	
+	
+	public void netEnergy()
+	{
+		
+	}
 }
 
 		

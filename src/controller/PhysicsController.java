@@ -157,16 +157,239 @@ public class PhysicsController
 			}
 				public void K2I()
 				{
-					
+					System.out.println("What do you want to find?");
+					System.out.println(" ---------");
+					System.out.println("| Pounds  |");
+					System.out.println("| Ounces  |");
+					System.out.println("| Back    |");
+					System.out.println("| Restart |");
+					System.out.println(" ---------");
+					Scanner PandO;
+					PandO = new Scanner(System.in);
+					String typeI = PandO.nextLine();
+					if (typeI.equals("P"))
+						{
+						K2lbs();
+						}
+					if (typeI.equals("O"))
+					{
+						K2oz();
+					}
+					if (typeI.equals("B"))
+					{
+						K2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
+					}
+					PandO.close();
 				}
 				public void M2I()
 				{
-					
+					System.out.println("What do you want to find?");
+					System.out.println(" ---------");
+					System.out.println("| Pounds  |");
+					System.out.println("| Ounces  |");
+					System.out.println("| Back    |");
+					System.out.println("| Restart |");
+					System.out.println(" ---------");
+					Scanner PandO;
+					PandO = new Scanner(System.in);
+					String typeI = PandO.nextLine();
+					if (typeI.equals("P"))
+						{
+						Mi2lbs();
+						}
+					if (typeI.equals("O"))
+					{
+						Mi2oz();
+					}
+					if (typeI.equals("B"))
+					{
+						M2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
+					}
+					PandO.close();
 				}
 				public void G2I()
 				{
-					
+					System.out.println("What do you want to find?");
+					System.out.println(" ---------");
+					System.out.println("| Pounds  |");
+					System.out.println("| Ounces  |");
+					System.out.println("| Back    |");
+					System.out.println("| Restart |");
+					System.out.println(" ---------");
+					Scanner PandO;
+					PandO = new Scanner(System.in);
+					String typeI = PandO.nextLine();
+					if (typeI.equals("P"))
+						{
+						G2lbs();
+						}
+					if (typeI.equals("O"))
+					{
+						G2oz();
+					}
+					if (typeI.equals("B"))
+					{
+						G2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
+					}
+					PandO.close();
 				}
+					public void K2lbs()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ---------------------------------");
+						System.out.println("| How many Kilograms do you have? |");
+						System.out.println("| Back                            |");
+						System.out.println("| Restart                         |");
+						System.out.println(" ---------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ "Kilograms = " + lbs2g*2.204622622 + " Pounds");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							K2I();
+						}
+						lbs.close();
+					}
+					public void K2oz()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ---------------------------------");
+						System.out.println("| How many Kilograms do you have? |");
+						System.out.println("| Back                            |");
+						System.out.println("| Restart                         |");
+						System.out.println(" ---------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Kilograms = " + lbs2g*2.204622622*16 + " Ounces");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							K2I();
+						}
+						lbs.close();
+					}
+					public void G2lbs()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ "Grams = " + lbs2g*0.002204622622 + " Pounds");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							G2I();
+						}
+						lbs.close();
+					}
+					public void G2oz()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ "Grams = " + lbs2g*0.002204622622*16 + " Ounces");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							G2I();
+						}
+						lbs.close();
+					}
+					public void Mi2lbs()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Milligrams do you have? |");
+						System.out.println("| Back                             |");
+						System.out.println("| Restart                          |");
+						System.out.println(" ----------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ "Milligrams = " + lbs2g*0.000002204622622 + " Pounds");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							M2I();
+						}
+						lbs.close();
+					}
+					public void Mi2oz()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Milligrams do you have? |");
+						System.out.println("| Back                             |");
+						System.out.println("| Restart                          |");
+						System.out.println(" ----------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ "Milligrams = " + lbs2g/0.000002204622622*16 + " Ounces");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							M2I();
+						}
+						lbs.close();
+					}
+					
 				public void K2M()
 				{
 					System.out.println("Whatare you trying to find? (you have Kilograms)");
@@ -253,27 +476,147 @@ public class PhysicsController
 				}
 					public void K2G()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ---------------------------------");
+						System.out.println("| How many Kilograms do you have? |");
+						System.out.println("| Back                            |");
+						System.out.println("| Restart                         |");
+						System.out.println(" ---------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Kilograms = " + lbs2g*1000 + " Grams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							K2M();
+						}
+						lbs.close();
 					}
 					public void K2Mi()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ---------------------------------");
+						System.out.println("| How many Kilograms do you have? |");
+						System.out.println("| Back                            |");
+						System.out.println("| Restart                         |");
+						System.out.println(" ---------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Kilograms = " + lbs2g*100000 + " Milligrams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							K2M();
+						}
+						lbs.close();
 					}
 					public void G2K()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Grams = " + lbs2g/1000 + " Kilograms");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							G2M();
+						}
+						lbs.close();
 					}
 					public void G2Mi()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Grams = " + lbs2g*100 + " Milligrams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							G2M();
+						}
+						lbs.close();
 					}
 					public void Mi2K()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Milligrams = " + lbs2g/100000 + " Kilograms");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							M2M();
+						}
+						lbs.close();
 					}
 					public void Mi2G()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" -----------------------------");
+						System.out.println("| How many Grams do you have? |");
+						System.out.println("| Back                        |");
+						System.out.println("| Restart                     |");
+						System.out.println(" -----------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Milligrams = " + lbs2g/100 + " Grams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							M2M();
+						}
+						lbs.close();
 					}
 			
 		public void Imperial()
@@ -300,8 +643,8 @@ public class PhysicsController
 				weightConversion();
 			}
 			PandO.close();
-			{
-			}
+			
+			
 		}
 			public void Ounces2()
 			{
@@ -363,7 +706,7 @@ public class PhysicsController
 					System.out.println(" ------------------------------");
 					double ounces2lbs;
 					ounces2lbs = ounces.nextDouble();
-					System.out.println(ounces2lbs + "oz = " + ounces2lbs/16 + " lbs");
+					System.out.println(ounces2lbs + " oz = " + ounces2lbs/16 + " lbs");
 					System.out.println("RESTART?");
 					String restart;
 					restart = ounces.next();
@@ -378,17 +721,45 @@ public class PhysicsController
 				}
 				public void O2M()
 				{
-					
+					System.out.println("What do you want to find?");
+					System.out.println(" ------------");
+					System.out.println("| Kilograms  |");
+					System.out.println("| Grams      |");
+					System.out.println("| Milligrams |");
+					System.out.println("| Back       |");
+					System.out.println(" ------------");
+					Scanner KGM;
+					KGM = new Scanner(System.in);
+					String typeI = KGM.nextLine();
+					if (typeI.equals("K"))
+					{
+						O2K();
+					}
+					if (typeI.equals("G"))
+					{
+						O2G();
+					}
+					if (typeI.equals("M"))
+					{
+						O2Mi();
+					}
+					if (typeI.equals("B"))
+					{
+						Ounces2();
+					}
+					KGM.close();
 				}
 				public void P2I()
 				{
 					Scanner lbs = new Scanner(System.in);
 					System.out.println(" ------------------------------");
 					System.out.println("| How many Pounds do you have? |");
+					System.out.println("| Back                         |");
+					System.out.println("| Restart                      |");
 					System.out.println(" ------------------------------");
 					double lbs2oz;
 					lbs2oz = lbs.nextDouble();
-					System.out.println(lbs2oz + "lbs = " + lbs2oz*16 + " Ounces");
+					System.out.println(lbs2oz + " lbs = " + lbs2oz*16 + " Ounces");
 					System.out.println("RESTART?");
 					String restart;
 					restart = lbs.next();
@@ -396,13 +767,187 @@ public class PhysicsController
 					{
 						start();
 					}
+					if (restart.equals("B"))
+					{
+						Pounds2();
+					}
 					lbs.close();
 				
 				}
 				public void P2M()
 				{
-					
+					System.out.println("What do you want to find?");
+					System.out.println(" ------------");
+					System.out.println("| Kilograms  |");
+					System.out.println("| Grams      |");
+					System.out.println("| Milligrams |");
+					System.out.println("| Back       |");
+					System.out.println(" ------------");
+					Scanner KGM;
+					KGM = new Scanner(System.in);
+					String typeI = KGM.nextLine();
+					if (typeI.equals("K"))
+					{
+						P2K();
+					}
+					if (typeI.equals("G"))
+					{
+						P2G();
+					}
+					if (typeI.equals("M"))
+					{
+						P2Mi();
+					}
+					if (typeI.equals("B"))
+					{
+						Pounds2();
+					}
+					KGM.close();
 				}
+					public void P2K()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Pounds do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Pounds = " + lbs2g/2.204622622 + " Kilograms");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							P2M();
+						}
+						lbs.close();
+					}
+					public void P2G()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Pounds do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " lbs = " + lbs2g/0.002204622622 + " Grams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							P2M();
+						}
+						lbs.close();
+					}
+					public void P2Mi()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Pounds do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " lbs = " + lbs2g/0.00002204622622 + " Milligrams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							P2M();
+						}
+						lbs.close();
+					}
+					public void O2K()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Ounces do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/2.204622622 + " Kilograms");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							O2M();
+						}
+						lbs.close();
+					}
+					public void O2G()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Ounces do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/0.00204622622 + " Grams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							O2M();
+						}
+						lbs.close();
+					}
+					public void O2Mi()
+					{
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ------------------------------");
+						System.out.println("| How many Ounces do you have? |");
+						System.out.println("| Back                         |");
+						System.out.println("| Restart                      |");
+						System.out.println(" ------------------------------");
+						double lbs2g;
+						lbs2g = lbs.nextDouble();
+						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/0.00000204622622 + " Milligrams");
+						System.out.println("RESTART?");
+						String restart;
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							O2M();
+						}
+						lbs.close();
+					}
 }
 
 		

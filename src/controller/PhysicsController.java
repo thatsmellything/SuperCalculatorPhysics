@@ -972,9 +972,195 @@ public class PhysicsController
 	
 	public void kineticEnergy()
 	{
-		
-	}
+		Scanner weightScanner = new Scanner(System.in);
+		System.out.println("What do you have?");
+		System.out.println(" -----------------------");
+		System.out.println("| Imperial (lbs, ounces) |");
+		System.out.println("| Metric (kg, grams, mg) |");
+		System.out.println("| Back                   |");
+		System.out.println(" -----------------------");
+		String have = weightScanner.next();
 	
+		
+		if (have.equals("I"))
+			{
+			KEImperial();
+			}
+		if (have.equals("M"))
+		{
+			KEMetric();
+		}
+		if(have.equals("B"))
+		{
+			start();
+		}
+		weightScanner.close();
+	}
+		public void KEMetric()
+	{
+		System.out.println("What do you have?");
+		System.out.println(" ------------");
+		System.out.println("| Kilograms  |");
+		System.out.println("| Grams      |");
+		System.out.println("| Milligrams |");
+		System.out.println("| Back       |");
+		System.out.println(" ------------");
+		Scanner KGM;
+		KGM = new Scanner(System.in);
+		String typeI = KGM.nextLine();
+		if (typeI.equals("K"))
+		{
+			KeK();
+		}
+		if (typeI.equals("G"))
+		{
+			KeG();
+		}
+		if (typeI.equals("M"))
+		{
+			KeM();
+		}
+		if (typeI.equals("B"))
+		{
+			kineticEnergy();
+		}
+		KGM.close();
+	}
+		public void KEImperial()
+		{
+			System.out.println("What do you have?");
+			System.out.println(" --------");
+			System.out.println("| Pounds |");
+			System.out.println("| Ounces |");
+			System.out.println("| Back   |");
+			System.out.println(" --------");
+			Scanner PandO;
+			PandO = new Scanner(System.in);
+			String typeI = PandO.nextLine();
+			if (typeI.equals("P"))
+				{
+				KeLbs();
+				}
+			if (typeI.equals("O"))
+			{
+				KeOz();
+			}
+			if (typeI.equals("B"))
+			{
+				kineticEnergy();
+			}
+			PandO.close();
+			
+			
+		}
+			public void KeK()
+		{
+			Scanner lbs = new Scanner(System.in);
+			System.out.println(" ---------------------------------");
+			System.out.println("| How many Kilograms do you have? |");
+			System.out.println("| Back                            |");
+			System.out.println("| Restart                         |");
+			System.out.println(" ---------------------------------");
+			double KG;
+			KG = lbs.nextDouble();
+			
+			System.out.println(" --------------------------------------------");
+			System.out.println("| How fast (in meters) is the object moving? |");
+			System.out.println("| Back                                       |");
+			System.out.println("| Restart                                    |");
+			System.out.println(" --------------------------------------------");
+			double speed;
+			speed = lbs.nextDouble();
+			double joules = .5*(KG)*(speed*speed); 
+			System.out.println(KG+ " Kilograms moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+			System.out.println("RESTART?");
+			String restart;
+			restart = lbs.next();
+			if (restart.equals("R"))
+			{
+				start();
+			}
+			if (restart.equals("B"))
+			{
+				KEMetric();
+			}
+			lbs.close();
+		}
+			public void KeG()
+		{
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ---------------------------------");
+				System.out.println("| How many Grams do you have?     |");
+				System.out.println("| Back                            |");
+				System.out.println("| Restart                         |");
+				System.out.println(" ---------------------------------");
+				double KG;
+				KG = lbs.nextDouble();
+				
+				System.out.println(" --------------------------------------------");
+				System.out.println("| How fast (in meters) is the object moving? |");
+				System.out.println("| Back                                       |");
+				System.out.println("| Restart                                    |");
+				System.out.println(" --------------------------------------------");
+				double speed;
+				speed = lbs.nextDouble();
+				double joules = .5*(KG/1000)*(speed*speed); 
+				System.out.println(KG+ " Grams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println("RESTART?");
+				String restart;
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					KEMetric();
+				}
+				lbs.close();
+		}
+			public void KeM()
+		{
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" --------------------------------------");
+				System.out.println("| How many Milligrams do you have?     |");
+				System.out.println("| Back                                 |");
+				System.out.println("| Restart                              |");
+				System.out.println(" --------------------------------------");
+				double KG;
+				KG = lbs.nextDouble();
+				
+				System.out.println(" --------------------------------------------");
+				System.out.println("| How fast (in meters) is the object moving? |");
+				System.out.println("| Back                                       |");
+				System.out.println("| Restart                                    |");
+				System.out.println(" --------------------------------------------");
+				double speed;
+				speed = lbs.nextDouble();
+				double joules = .5*(KG/100000)*(speed*speed); 
+				System.out.println(KG+ " Milligrams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println("RESTART?");
+				String restart;
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					KEMetric();
+				}
+				lbs.close();
+		}
+			public void KeLbs()
+		{
+			
+		}
+			public void KeOz()
+		{
+			
+		}
+		
 	
 	public void netEnergy()
 	{

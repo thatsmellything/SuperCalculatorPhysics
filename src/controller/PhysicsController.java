@@ -1154,11 +1154,70 @@ public class PhysicsController
 		}
 			public void KeLbs()
 		{
-			
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ------------------------------");
+				System.out.println("| How many Pounds do you have? |");
+				System.out.println("| Back                         |");
+				System.out.println("| Restart                      |");
+				System.out.println(" ------------------------------");
+				double lbs2g;
+				lbs2g = lbs.nextDouble();
+				double P2K = lbs2g/2.204622622;
+				System.out.println(" --------------------------------------------");
+				System.out.println("| How fast (in meters) is the object moving? |");
+				System.out.println("| Back                                       |");
+				System.out.println("| Restart                                    |");
+				System.out.println(" --------------------------------------------");
+				double speed;
+				speed = lbs.nextDouble();
+				double joules = .5*(P2K)*(speed*speed); 
+				System.out.println(lbs2g+ " Pounds moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println("RESTART?");
+				String restart;
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					KEImperial();
+				}
+				lbs.close();
+				
 		}
 			public void KeOz()
 		{
-			
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ------------------------------");
+				System.out.println("| How many Ounces do you have? |");
+				System.out.println("| Back                         |");
+				System.out.println("| Restart                      |");
+				System.out.println(" ------------------------------");
+				double lbs2g;
+				lbs2g = lbs.nextDouble();
+				double P2K = (lbs2g/16)/2.204622622;
+				System.out.println(" --------------------------------------------");
+				System.out.println("| How fast (in meters) is the object moving? |");
+				System.out.println("| Back                                       |");
+				System.out.println("| Restart                                    |");
+				System.out.println(" --------------------------------------------");
+				double speed;
+				speed = lbs.nextDouble();
+				double joules = .5*(P2K)*(speed*speed); 
+				System.out.println(lbs2g+ " Ounces moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println("RESTART?");
+				String restart;
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					KEImperial();
+				}
+				lbs.close();
 		}
 		
 	

@@ -2,6 +2,8 @@ package controller;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PhysicsController
 {
 
@@ -1224,6 +1226,56 @@ public class PhysicsController
 	public void netEnergy()
 	{
 		
+	}
+	//--------Catch ERRORS------------
+	public boolean validInt(String example)
+	{
+		boolean isValid = false;
+		
+		//Immediately assign create and make a value equal to something. then return that
+		try
+		{
+			Integer.parseInt(example);
+			isValid = true;
+			
+		}
+		
+		catch(NumberFormatException error)
+		{
+			System.out.println("Type in a valid number boi");
+		}
+		return isValid;
+		//always put return at the bottom for the boolean or else you get red death
+	}
+	public boolean validDouble(String example)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Double.parseDouble(example);
+			isValid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			System.out.println("Only floating values are allowed for input");
+		}
+		
+		return isValid;
+	}
+	public boolean validBool(String maybeBool)
+	{
+		boolean isValid = false;
+		try
+		{
+			Boolean.parseBoolean(maybeBool);
+			isValid = true;
+		}
+		catch(IllegalArgumentException error)
+		{
+			JOptionPane.showMessageDialog(null, "Type in a boolean value IE treu or false ");
+		}
+		return isValid;
 	}
 }
 

@@ -52,6 +52,11 @@ public class PhysicsController
 		System.out.println(" -----------------------");
 		String have = weightScanner.next();
 	
+		while (have == null || have != "I" || have != "M" || have != "B")
+		{
+			System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
+			weightConversion();
+		}
 		
 		if (have.equals("I"))
 			{
@@ -79,6 +84,11 @@ public class PhysicsController
 			Scanner KGM;
 			KGM = new Scanner(System.in);
 			String typeI = KGM.nextLine();
+			while (typeI == null || typeI != "I" || typeI != "M" || typeI != "B")
+			{
+				System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
+				weightConversion();
+			}
 			if (typeI.equals("K"))
 			{
 				K2();
@@ -107,6 +117,11 @@ public class PhysicsController
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
 				String Kilo2 = K2.nextLine();
+				while (Kilo2 == null || Kilo2 != "I" || Kilo2 != "M" || Kilo2 != "B")
+				{
+					System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
+					weightConversion();
+				}
 				if (Kilo2.equals("I"))
 				{
 					K2I();

@@ -12,6 +12,7 @@ public class PhysicsController
 		
 		System.out.println("This is the super calculator Physics Version!");
 		System.out.println("Please select what you want to find by typing the first letter, or first letters (multiple words) of the selection");
+		System.out.println("Or press R at any time to restart the application");
 		System.out.println(" ------------------- ");
 		System.out.println("| Weight Conversion |");
 		System.out.println("| Potential Energy  |");
@@ -52,11 +53,6 @@ public class PhysicsController
 		System.out.println(" -----------------------");
 		String have = weightScanner.next();
 	
-		while (have == null || have != "I" || have != "M" || have != "B")
-		{
-			System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
-			weightConversion();
-		}
 		
 		if (have.equals("I"))
 			{
@@ -67,6 +63,10 @@ public class PhysicsController
 			Metric();
 		}
 		if(have.equals("B"))
+		{
+			start();
+		}
+		if(have.equals("R"))
 		{
 			start();
 		}
@@ -84,11 +84,6 @@ public class PhysicsController
 			Scanner KGM;
 			KGM = new Scanner(System.in);
 			String typeI = KGM.nextLine();
-			while (typeI == null || typeI != "I" || typeI != "M" || typeI != "B")
-			{
-				System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
-				weightConversion();
-			}
 			if (typeI.equals("K"))
 			{
 				K2();
@@ -105,6 +100,10 @@ public class PhysicsController
 			{
 				weightConversion();
 			}
+			if (typeI.equals("R"))
+			{
+				start();
+			}
 			KGM.close();
 		}
 			public void K2()
@@ -117,11 +116,6 @@ public class PhysicsController
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
 				String Kilo2 = K2.nextLine();
-				while (Kilo2 == null || Kilo2 != "I" || Kilo2 != "M" || Kilo2 != "B")
-				{
-					System.out.println("You have got to enetr the capital beginning letter of what you want, or if it is multiple wordds enetr the cap first letter of both words");
-					weightConversion();
-				}
 				if (Kilo2.equals("I"))
 				{
 					K2I();
@@ -133,6 +127,10 @@ public class PhysicsController
 				if (Kilo2.equals("B"))
 				{
 					Metric();
+				}
+				if  (Kilo2.equals("R"))
+				{
+					start();
 				}
 				K2.close();
 			}
@@ -158,6 +156,10 @@ public class PhysicsController
 				{
 					Metric();
 				}
+				if (Grams2.equals("R"))
+				{
+					start();
+				}
 				G2.close();
 			}
 			public void M2()
@@ -182,6 +184,10 @@ public class PhysicsController
 				{
 					Metric();
 				}
+				if (Milli2.equals("R"))
+				{
+					start();
+				}
 				M2.close();
 			}
 				public void K2I()
@@ -196,6 +202,7 @@ public class PhysicsController
 					Scanner PandO;
 					PandO = new Scanner(System.in);
 					String typeI = PandO.nextLine();
+					
 					if (typeI.equals("P"))
 						{
 						K2lbs();
@@ -443,8 +450,10 @@ public class PhysicsController
 					{
 						K2();
 					}
-					
-					
+					if (CT.equals("R"))
+					{
+						start();
+					}
 					K2.close();
 				}
 				public void G2M()
@@ -471,8 +480,10 @@ public class PhysicsController
 					{
 						G2();
 					}
-					
-					
+					if (CT.equals("R"))
+					{
+						start();
+					}
 					G2.close();
 				}
 				public void M2M()
@@ -499,8 +510,10 @@ public class PhysicsController
 					{
 						M2();
 					}
-					
-					
+					if (CT.equals("R"))
+					{
+						start();
+					}
 					Mi2.close();
 				}
 					public void K2G()
@@ -671,6 +684,10 @@ public class PhysicsController
 			{
 				weightConversion();
 			}
+			if (typeI.equals("R"))
+			{
+				start();
+			}
 			PandO.close();
 			
 			
@@ -697,6 +714,10 @@ public class PhysicsController
 				{
 					Imperial();
 				}
+				if (ouncesToo.equals("R"))
+				{
+					start();
+				}
 				O2.close();
 			}
 			public void Pounds2()
@@ -710,7 +731,6 @@ public class PhysicsController
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
 				String poundsToo = P2.nextLine();
-				
 				if (poundsToo.equals("B"))
 					{
 					Imperial();
@@ -722,6 +742,10 @@ public class PhysicsController
 				if (poundsToo.equals("M"))
 				{
 					P2M();
+				}
+				if (poundsToo.equals("R"))
+				{
+					start();
 				}
 				P2.close();
 				
@@ -775,6 +799,10 @@ public class PhysicsController
 					if (typeI.equals("B"))
 					{
 						Ounces2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
 					}
 					KGM.close();
 				}
@@ -830,6 +858,10 @@ public class PhysicsController
 					if (typeI.equals("B"))
 					{
 						Pounds2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
 					}
 					KGM.close();
 				}
@@ -997,7 +1029,6 @@ public class PhysicsController
 		System.out.println("| Back                   |");
 		System.out.println(" -----------------------");
 		String have = weightScanner.next();
-	
 		
 		if (have.equals("I"))
 			{
@@ -1041,6 +1072,10 @@ public class PhysicsController
 		{
 			kineticEnergy();
 		}
+		if (typeI.equals("R"))
+		{
+			start();
+		}
 		KGM.close();
 	}
 		public void KEImperial()
@@ -1053,7 +1088,7 @@ public class PhysicsController
 			System.out.println(" --------");
 			Scanner PandO;
 			PandO = new Scanner(System.in);
-			String typeI = PandO.nextLine();
+			String typeI = PandO.nextLine();			
 			if (typeI.equals("P"))
 				{
 				KeLbs();
@@ -1065,6 +1100,10 @@ public class PhysicsController
 			if (typeI.equals("B"))
 			{
 				kineticEnergy();
+			}
+			if (typeI.equals("R"))
+			{
+				start();
 			}
 			PandO.close();
 			
@@ -1213,6 +1252,7 @@ public class PhysicsController
 				System.out.println(" ------------------------------");
 				double lbs2g;
 				lbs2g = lbs.nextDouble();
+	
 				double P2K = (lbs2g/16)/2.204622622;
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");

@@ -20,8 +20,9 @@ public class PhysicsController
 		System.out.println("| Net Energy        |");
 		System.out.println(" ------------------- ");
 		Scanner inputScanner = new Scanner(System.in);
+		int x=0;
+		do {
 		String answer = inputScanner.nextLine();
-		
 		if (answer.equals("WC"))
 		{
 			weightConversion();
@@ -38,7 +39,8 @@ public class PhysicsController
 		{
 			netEnergy();
 		}
-
+		} while (x < 10);
+		start();
 		inputScanner.close();
 	}
 	

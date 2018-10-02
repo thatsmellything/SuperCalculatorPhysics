@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -1268,14 +1269,39 @@ public class PhysicsController
 			System.out.println(" ---------------------------------");
 			System.out.println("| How many Kilograms do you have? |");
 			System.out.println(" ---------------------------------");
-			double KG;
-			KG = lbs.nextDouble();
-			
+			boolean validInputNum = false;
+			double KG = 0;
+			while(!validInputNum)
+			{
+				try
+				{
+					KG = lbs.nextDouble();
+					validInputNum=true;
+				}
+				catch (InputMismatchException e)
+				{
+					System.out.println("Please enter a number");
+					lbs.nextLine();
+				}
+			}
 			System.out.println(" --------------------------------------------");
 			System.out.println("| How fast (in meters) is the object moving? |");
 			System.out.println(" --------------------------------------------");
-			double speed;
-			speed = lbs.nextDouble();
+			boolean validInputSp = false;
+			double speed = 0;
+			while(!validInputSp)
+			{
+				try
+				{
+					speed = lbs.nextDouble();
+					validInputSp=true;
+				}
+				catch (InputMismatchException e)
+				{
+					System.out.println("Please enter a number");
+					lbs.nextLine();
+				}
+			}
 			double joules = .5*(KG)*(speed*speed); 
 			System.out.println(KG+ " Kilograms moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
 			System.out.println(" ---------");
@@ -1304,14 +1330,40 @@ public class PhysicsController
 				System.out.println(" ---------------------------------");
 				System.out.println("| How many Grams do you have?     |");
 				System.out.println(" ---------------------------------");
-				double KG;
-				KG = lbs.nextDouble();
+				boolean validInputNum = false;
+				double KG = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						KG = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
 				System.out.println(" --------------------------------------------");
-				double speed;
-				speed = lbs.nextDouble();
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double joules = .5*(KG/1000)*(speed*speed); 
 				System.out.println(KG+ " Grams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
 				System.out.println(" ---------");
@@ -1340,14 +1392,40 @@ public class PhysicsController
 				System.out.println(" --------------------------------------");
 				System.out.println("| How many Milligrams do you have?     |");
 				System.out.println(" --------------------------------------");
-				double KG;
-				KG = lbs.nextDouble();
+				boolean validInputNum = false;
+				double KG = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						KG = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
 				System.out.println(" --------------------------------------------");
-				double speed;
-				speed = lbs.nextDouble();
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double joules = .5*(KG/100000)*(speed*speed); 
 				System.out.println(KG+ " Milligrams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
 				System.out.println(" ---------");
@@ -1376,14 +1454,40 @@ public class PhysicsController
 				System.out.println(" ------------------------------");
 				System.out.println("| How many Pounds do you have? |");
 				System.out.println(" ------------------------------");
-				double lbs2g;
-				lbs2g = lbs.nextDouble();
+				boolean validInputNum = false;
+				double lbs2g = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						lbs2g = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double P2K = lbs2g/2.204622622;
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
 				System.out.println(" --------------------------------------------");
-				double speed;
-				speed = lbs.nextDouble();
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double joules = .5*(P2K)*(speed*speed); 
 				System.out.println(lbs2g+ " Pounds moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
 				System.out.println(" ---------");
@@ -1413,19 +1517,46 @@ public class PhysicsController
 				System.out.println(" ------------------------------");
 				System.out.println("| How many Ounces do you have? |");
 				System.out.println(" ------------------------------");
-				double lbs2g;
-				lbs2g = lbs.nextDouble();
-	
+				boolean validInputNum = false;
+				double lbs2g = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						lbs2g = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double P2K = (lbs2g/16)/2.204622622;
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
-				System.out.println("| Back                                       |");
-				System.out.println("| Restart                                    |");
 				System.out.println(" --------------------------------------------");
-				double speed;
-				speed = lbs.nextDouble();
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
 				double joules = .5*(P2K)*(speed*speed); 
 				System.out.println(lbs2g+ " Ounces moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
 				System.out.println("RESTART?");
 				String restart;
 				int x = 0;
@@ -1494,7 +1625,7 @@ public class PhysicsController
 		}
 		catch(IllegalArgumentException error)
 		{
-			JOptionPane.showMessageDialog(null, "Type in a boolean value IE treu or false ");
+			JOptionPane.showMessageDialog(null, "Type in a boolean value IE true or false ");
 		}
 		return isValid;
 	}

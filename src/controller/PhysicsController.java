@@ -53,9 +53,9 @@ public class PhysicsController
 		System.out.println("| Metric (kg, grams, mg) |");
 		System.out.println("| Back                   |");
 		System.out.println(" -----------------------");
+		int x=0;
+		do {
 		String have = weightScanner.next();
-	
-		
 		if (have.equals("I"))
 			{
 			Imperial();
@@ -72,6 +72,7 @@ public class PhysicsController
 		{
 			start();
 		}
+		} while (x<10);
 		weightScanner.close();
 	}
 		public void Metric()
@@ -85,6 +86,8 @@ public class PhysicsController
 			System.out.println(" ------------");
 			Scanner KGM;
 			KGM = new Scanner(System.in);
+			int x = 0;
+			do {
 			String typeI = KGM.nextLine();
 			if (typeI.equals("K"))
 			{
@@ -106,6 +109,7 @@ public class PhysicsController
 			{
 				start();
 			}
+			}while (x<10);
 			KGM.close();
 		}
 			public void K2()
@@ -117,6 +121,8 @@ public class PhysicsController
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
+				int x = 0;
+				do {
 				String Kilo2 = K2.nextLine();
 				if (Kilo2.equals("I"))
 				{
@@ -134,6 +140,7 @@ public class PhysicsController
 				{
 					start();
 				}
+				}while (x<10);
 				K2.close();
 			}
 			public void G2()
@@ -145,6 +152,8 @@ public class PhysicsController
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
+				int x = 0;
+				do {
 				String Grams2 = G2.nextLine();
 				if (Grams2.equals("I"))
 				{
@@ -162,6 +171,7 @@ public class PhysicsController
 				{
 					start();
 				}
+				}while (x<10);
 				G2.close();
 			}
 			public void M2()
@@ -173,6 +183,8 @@ public class PhysicsController
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
+				int x = 0;
+				do {
 				String Milli2 = M2.nextLine();
 				if (Milli2.equals("I"))
 				{
@@ -190,6 +202,7 @@ public class PhysicsController
 				{
 					start();
 				}
+				}while (x<10);
 				M2.close();
 			}
 				public void K2I()
@@ -203,6 +216,8 @@ public class PhysicsController
 					System.out.println(" ---------");
 					Scanner PandO;
 					PandO = new Scanner(System.in);
+					int x = 0;
+					do {
 					String typeI = PandO.nextLine();
 					
 					if (typeI.equals("P"))
@@ -221,6 +236,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while (x<10);
 					PandO.close();
 				}
 				public void M2I()
@@ -234,6 +250,8 @@ public class PhysicsController
 					System.out.println(" ---------");
 					Scanner PandO;
 					PandO = new Scanner(System.in);
+					int x = 0;
+					do {
 					String typeI = PandO.nextLine();
 					if (typeI.equals("P"))
 						{
@@ -251,6 +269,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<10);
 					PandO.close();
 				}
 				public void G2I()
@@ -264,6 +283,8 @@ public class PhysicsController
 					System.out.println(" ---------");
 					Scanner PandO;
 					PandO = new Scanner(System.in);
+					int x = 0;
+					do {
 					String typeI = PandO.nextLine();
 					if (typeI.equals("P"))
 						{
@@ -281,6 +302,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<10);
 					PandO.close();
 				}
 					public void K2lbs()
@@ -288,14 +310,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ---------------------------------");
 						System.out.println("| How many Kilograms do you have? |");
-						System.out.println("| Back                            |");
-						System.out.println("| Restart                         |");
 						System.out.println(" ---------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ "Kilograms = " + lbs2g*2.204622622 + " Pounds");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x = 0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -305,6 +331,7 @@ public class PhysicsController
 						{
 							K2I();
 						}
+						}while (x<10);
 						lbs.close();
 					}
 					public void K2oz()
@@ -312,14 +339,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ---------------------------------");
 						System.out.println("| How many Kilograms do you have? |");
-						System.out.println("| Back                            |");
-						System.out.println("| Restart                         |");
 						System.out.println(" ---------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Kilograms = " + lbs2g*2.204622622*16 + " Ounces");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -329,6 +360,7 @@ public class PhysicsController
 						{
 							K2I();
 						}
+						}while (x<1);
 						lbs.close();
 					}
 					public void G2lbs()
@@ -336,14 +368,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ "Grams = " + lbs2g*0.002204622622 + " Pounds");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -353,6 +389,7 @@ public class PhysicsController
 						{
 							G2I();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void G2oz()
@@ -360,14 +397,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ "Grams = " + lbs2g*0.002204622622*16 + " Ounces");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -377,6 +418,7 @@ public class PhysicsController
 						{
 							G2I();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void Mi2lbs()
@@ -384,14 +426,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ----------------------------------");
 						System.out.println("| How many Milligrams do you have? |");
-						System.out.println("| Back                             |");
-						System.out.println("| Restart                          |");
 						System.out.println(" ----------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ "Milligrams = " + lbs2g*0.000002204622622 + " Pounds");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -401,6 +447,7 @@ public class PhysicsController
 						{
 							M2I();
 						}
+						}while(x<2);
 						lbs.close();
 					}
 					public void Mi2oz()
@@ -408,14 +455,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ----------------------------------");
 						System.out.println("| How many Milligrams do you have? |");
-						System.out.println("| Back                             |");
-						System.out.println("| Restart                          |");
 						System.out.println(" ----------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ "Milligrams = " + lbs2g/0.000002204622622*16 + " Ounces");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -425,6 +476,7 @@ public class PhysicsController
 						{
 							M2I();
 						}
+						}while(x<3);
 						lbs.close();
 					}
 					
@@ -439,6 +491,8 @@ public class PhysicsController
 					Scanner K2;
 					K2 = new Scanner(System.in);
 					//CT = conversion type
+					int x =0;
+					do {
 					String CT = K2.nextLine();
 					if (CT.equals("G"))
 					{
@@ -456,6 +510,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<2);
 					K2.close();
 				}
 				public void G2M()
@@ -469,6 +524,8 @@ public class PhysicsController
 					Scanner G2;
 					G2 = new Scanner(System.in);
 					//CT = conversion type
+					int x =0;
+					do {
 					String CT = G2.nextLine();
 					if (CT.equals("K"))
 					{
@@ -486,6 +543,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<3);
 					G2.close();
 				}
 				public void M2M()
@@ -499,6 +557,8 @@ public class PhysicsController
 					Scanner Mi2;
 					Mi2 = new Scanner(System.in);
 					//CT = conversion type
+					int x =0;
+					do {
 					String CT = Mi2.nextLine();
 					if (CT.equals("K"))
 					{
@@ -516,6 +576,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<3);
 					Mi2.close();
 				}
 					public void K2G()
@@ -523,14 +584,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ---------------------------------");
 						System.out.println("| How many Kilograms do you have? |");
-						System.out.println("| Back                            |");
-						System.out.println("| Restart                         |");
 						System.out.println(" ---------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Kilograms = " + lbs2g*1000 + " Grams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -540,6 +605,7 @@ public class PhysicsController
 						{
 							K2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void K2Mi()
@@ -547,14 +613,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ---------------------------------");
 						System.out.println("| How many Kilograms do you have? |");
-						System.out.println("| Back                            |");
-						System.out.println("| Restart                         |");
 						System.out.println(" ---------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Kilograms = " + lbs2g*100000 + " Milligrams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -564,6 +634,7 @@ public class PhysicsController
 						{
 							K2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void G2K()
@@ -571,14 +642,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Grams = " + lbs2g/1000 + " Kilograms");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -588,6 +663,7 @@ public class PhysicsController
 						{
 							G2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void G2Mi()
@@ -595,14 +671,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Grams = " + lbs2g*100 + " Milligrams");
-						System.out.println("RESTART?");
+						
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -612,6 +692,7 @@ public class PhysicsController
 						{
 							G2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void Mi2K()
@@ -619,14 +700,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Milligrams = " + lbs2g/100000 + " Kilograms");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -636,6 +721,7 @@ public class PhysicsController
 						{
 							M2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void Mi2G()
@@ -643,14 +729,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" -----------------------------");
 						System.out.println("| How many Grams do you have? |");
-						System.out.println("| Back                        |");
-						System.out.println("| Restart                     |");
 						System.out.println(" -----------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Milligrams = " + lbs2g/100 + " Grams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -660,6 +750,7 @@ public class PhysicsController
 						{
 							M2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 			
@@ -673,6 +764,8 @@ public class PhysicsController
 			System.out.println(" --------");
 			Scanner PandO;
 			PandO = new Scanner(System.in);
+			int x =0;
+			do {
 			String typeI = PandO.nextLine();
 			if (typeI.equals("P"))
 				{
@@ -690,6 +783,7 @@ public class PhysicsController
 			{
 				start();
 			}
+			}while(x<1);
 			PandO.close();
 			
 			
@@ -703,6 +797,8 @@ public class PhysicsController
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
+				int x =0;
+				do {
 				String ouncesToo = O2.nextLine();
 				if (ouncesToo.equals("I"))
 				{
@@ -720,6 +816,7 @@ public class PhysicsController
 				{
 					start();
 				}
+				}while(x<1);
 				O2.close();
 			}
 			public void Pounds2()
@@ -732,6 +829,8 @@ public class PhysicsController
 				System.out.println("| Metric (kg, grams, mg) |");
 				System.out.println("| Back                   |");
 				System.out.println(" -----------------------");
+				int x =0;
+				do {
 				String poundsToo = P2.nextLine();
 				if (poundsToo.equals("B"))
 					{
@@ -749,6 +848,7 @@ public class PhysicsController
 				{
 					start();
 				}
+				}while(x<1);
 				P2.close();
 				
 			}
@@ -764,11 +864,14 @@ public class PhysicsController
 					System.out.println(ounces2lbs + " oz = " + ounces2lbs/16 + " lbs");
 					System.out.println("RESTART?");
 					String restart;
+					int x =0;
+					do {
 					restart = ounces.next();
 					if (restart.equals("R"))
 					{
 						start();
 					}
+					}while(x<1);
 					ounces.close();
 					
 					
@@ -785,6 +888,8 @@ public class PhysicsController
 					System.out.println(" ------------");
 					Scanner KGM;
 					KGM = new Scanner(System.in);
+					int x =0;
+					do {
 					String typeI = KGM.nextLine();
 					if (typeI.equals("K"))
 					{
@@ -806,6 +911,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<1);
 					KGM.close();
 				}
 				public void P2I()
@@ -821,6 +927,8 @@ public class PhysicsController
 					System.out.println(lbs2oz + " lbs = " + lbs2oz*16 + " Ounces");
 					System.out.println("RESTART?");
 					String restart;
+					int x =0;
+					do {
 					restart = lbs.next();
 					if (restart.equals("R"))
 					{
@@ -830,6 +938,7 @@ public class PhysicsController
 					{
 						Pounds2();
 					}
+					}while(x<1);
 					lbs.close();
 				
 				}
@@ -844,6 +953,8 @@ public class PhysicsController
 					System.out.println(" ------------");
 					Scanner KGM;
 					KGM = new Scanner(System.in);
+					int x =0;
+					do {
 					String typeI = KGM.nextLine();
 					if (typeI.equals("K"))
 					{
@@ -865,6 +976,7 @@ public class PhysicsController
 					{
 						start();
 					}
+					}while(x<1);
 					KGM.close();
 				}
 					public void P2K()
@@ -872,14 +984,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Pounds do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Pounds = " + lbs2g/2.204622622 + " Kilograms");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -889,6 +1005,7 @@ public class PhysicsController
 						{
 							P2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void P2G()
@@ -896,14 +1013,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Pounds do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " lbs = " + lbs2g/0.002204622622 + " Grams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -913,6 +1034,7 @@ public class PhysicsController
 						{
 							P2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void P2Mi()
@@ -920,14 +1042,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Pounds do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " lbs = " + lbs2g/0.00002204622622 + " Milligrams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -937,6 +1063,7 @@ public class PhysicsController
 						{
 							P2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void O2K()
@@ -944,14 +1071,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Ounces do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/2.204622622 + " Kilograms");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -961,6 +1092,7 @@ public class PhysicsController
 						{
 							O2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void O2G()
@@ -968,14 +1100,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Ounces do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/0.00204622622 + " Grams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -985,6 +1121,7 @@ public class PhysicsController
 						{
 							O2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					public void O2Mi()
@@ -992,14 +1129,18 @@ public class PhysicsController
 						Scanner lbs = new Scanner(System.in);
 						System.out.println(" ------------------------------");
 						System.out.println("| How many Ounces do you have? |");
-						System.out.println("| Back                         |");
-						System.out.println("| Restart                      |");
 						System.out.println(" ------------------------------");
 						double lbs2g;
 						lbs2g = lbs.nextDouble();
 						System.out.println(lbs2g+ " Ounces = " + (lbs2g*16)/0.00000204622622 + " Milligrams");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
 						System.out.println("RESTART?");
 						String restart;
+						int x =0;
+						do {
 						restart = lbs.next();
 						if (restart.equals("R"))
 						{
@@ -1009,6 +1150,7 @@ public class PhysicsController
 						{
 							O2M();
 						}
+						}while(x<1);
 						lbs.close();
 					}
 					
@@ -1030,6 +1172,8 @@ public class PhysicsController
 		System.out.println("| Metric (kg, grams, mg) |");
 		System.out.println("| Back                   |");
 		System.out.println(" -----------------------");
+		int x = 0;
+		do {
 		String have = weightScanner.next();
 		
 		if (have.equals("I"))
@@ -1044,6 +1188,7 @@ public class PhysicsController
 		{
 			start();
 		}
+		} while (x<3);
 		weightScanner.close();
 	}
 		public void KEMetric()
@@ -1057,6 +1202,8 @@ public class PhysicsController
 		System.out.println(" ------------");
 		Scanner KGM;
 		KGM = new Scanner(System.in);
+		int x = 0;
+		do {
 		String typeI = KGM.nextLine();
 		if (typeI.equals("K"))
 		{
@@ -1078,6 +1225,7 @@ public class PhysicsController
 		{
 			start();
 		}
+		} while (x<3);
 		KGM.close();
 	}
 		public void KEImperial()
@@ -1090,6 +1238,8 @@ public class PhysicsController
 			System.out.println(" --------");
 			Scanner PandO;
 			PandO = new Scanner(System.in);
+			int x = 0;
+			do {
 			String typeI = PandO.nextLine();			
 			if (typeI.equals("P"))
 				{
@@ -1107,6 +1257,7 @@ public class PhysicsController
 			{
 				start();
 			}
+			} while (x<3);
 			PandO.close();
 			
 			
@@ -1116,23 +1267,25 @@ public class PhysicsController
 			Scanner lbs = new Scanner(System.in);
 			System.out.println(" ---------------------------------");
 			System.out.println("| How many Kilograms do you have? |");
-			System.out.println("| Back                            |");
-			System.out.println("| Restart                         |");
 			System.out.println(" ---------------------------------");
 			double KG;
 			KG = lbs.nextDouble();
 			
 			System.out.println(" --------------------------------------------");
 			System.out.println("| How fast (in meters) is the object moving? |");
-			System.out.println("| Back                                       |");
-			System.out.println("| Restart                                    |");
 			System.out.println(" --------------------------------------------");
 			double speed;
 			speed = lbs.nextDouble();
 			double joules = .5*(KG)*(speed*speed); 
 			System.out.println(KG+ " Kilograms moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+			System.out.println(" ---------");
+			System.out.println("| Back    |");
+			System.out.println("| Restart |");
+			System.out.println(" ---------");
 			System.out.println("RESTART?");
 			String restart;
+			int x = 0;
+			do {
 			restart = lbs.next();
 			if (restart.equals("R"))
 			{
@@ -1142,6 +1295,7 @@ public class PhysicsController
 			{
 				KEMetric();
 			}
+			} while (x<3);
 			lbs.close();
 		}
 			public void KeG()
@@ -1149,23 +1303,25 @@ public class PhysicsController
 				Scanner lbs = new Scanner(System.in);
 				System.out.println(" ---------------------------------");
 				System.out.println("| How many Grams do you have?     |");
-				System.out.println("| Back                            |");
-				System.out.println("| Restart                         |");
 				System.out.println(" ---------------------------------");
 				double KG;
 				KG = lbs.nextDouble();
 				
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
-				System.out.println("| Back                                       |");
-				System.out.println("| Restart                                    |");
 				System.out.println(" --------------------------------------------");
 				double speed;
 				speed = lbs.nextDouble();
 				double joules = .5*(KG/1000)*(speed*speed); 
 				System.out.println(KG+ " Grams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
 				System.out.println("RESTART?");
 				String restart;
+				int x = 0;
+				do {
 				restart = lbs.next();
 				if (restart.equals("R"))
 				{
@@ -1175,6 +1331,7 @@ public class PhysicsController
 				{
 					KEMetric();
 				}
+				} while (x<3);
 				lbs.close();
 		}
 			public void KeM()
@@ -1182,23 +1339,25 @@ public class PhysicsController
 				Scanner lbs = new Scanner(System.in);
 				System.out.println(" --------------------------------------");
 				System.out.println("| How many Milligrams do you have?     |");
-				System.out.println("| Back                                 |");
-				System.out.println("| Restart                              |");
 				System.out.println(" --------------------------------------");
 				double KG;
 				KG = lbs.nextDouble();
 				
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
-				System.out.println("| Back                                       |");
-				System.out.println("| Restart                                    |");
 				System.out.println(" --------------------------------------------");
 				double speed;
 				speed = lbs.nextDouble();
 				double joules = .5*(KG/100000)*(speed*speed); 
 				System.out.println(KG+ " Milligrams moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
 				System.out.println("RESTART?");
 				String restart;
+				int x = 0;
+				do {
 				restart = lbs.next();
 				if (restart.equals("R"))
 				{
@@ -1208,6 +1367,7 @@ public class PhysicsController
 				{
 					KEMetric();
 				}
+				} while (x<3);
 				lbs.close();
 		}
 			public void KeLbs()
@@ -1215,23 +1375,25 @@ public class PhysicsController
 				Scanner lbs = new Scanner(System.in);
 				System.out.println(" ------------------------------");
 				System.out.println("| How many Pounds do you have? |");
-				System.out.println("| Back                         |");
-				System.out.println("| Restart                      |");
 				System.out.println(" ------------------------------");
 				double lbs2g;
 				lbs2g = lbs.nextDouble();
 				double P2K = lbs2g/2.204622622;
 				System.out.println(" --------------------------------------------");
 				System.out.println("| How fast (in meters) is the object moving? |");
-				System.out.println("| Back                                       |");
-				System.out.println("| Restart                                    |");
 				System.out.println(" --------------------------------------------");
 				double speed;
 				speed = lbs.nextDouble();
 				double joules = .5*(P2K)*(speed*speed); 
 				System.out.println(lbs2g+ " Pounds moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
 				System.out.println("RESTART?");
 				String restart;
+				int x = 0;
+				do {
 				restart = lbs.next();
 				if (restart.equals("R"))
 				{
@@ -1241,6 +1403,7 @@ public class PhysicsController
 				{
 					KEImperial();
 				}
+				} while (x<3);
 				lbs.close();
 				
 		}
@@ -1249,8 +1412,6 @@ public class PhysicsController
 				Scanner lbs = new Scanner(System.in);
 				System.out.println(" ------------------------------");
 				System.out.println("| How many Ounces do you have? |");
-				System.out.println("| Back                         |");
-				System.out.println("| Restart                      |");
 				System.out.println(" ------------------------------");
 				double lbs2g;
 				lbs2g = lbs.nextDouble();
@@ -1267,6 +1428,8 @@ public class PhysicsController
 				System.out.println(lbs2g+ " Ounces moving at " + speed + " Meters a second, is equivelent to " + joules +  " Joules of kinetic energy");
 				System.out.println("RESTART?");
 				String restart;
+				int x = 0;
+				do {
 				restart = lbs.next();
 				if (restart.equals("R"))
 				{
@@ -1276,6 +1439,7 @@ public class PhysicsController
 				{
 					KEImperial();
 				}
+				} while (x<3);
 				lbs.close();
 		}
 		

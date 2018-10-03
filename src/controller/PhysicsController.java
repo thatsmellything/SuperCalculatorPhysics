@@ -14,12 +14,12 @@ public class PhysicsController
 		System.out.println("This is the super calculator Physics Version!");
 		System.out.println("Please select what you want to find by typing the first letter, or first letters (multiple words) of the selection");
 		System.out.println("Or press R at any time to restart the application");
-		System.out.println(" ------------------- ");
-		System.out.println("| Weight Conversion |");
-		System.out.println("| Potential Energy  |");
-		System.out.println("| Kinetic Energy    |");
-		System.out.println("| Net Energy        |");
-		System.out.println(" ------------------- ");
+		System.out.println(" ---------------------- ");
+		System.out.println("| Weight Conversion    |");
+		System.out.println("| Potential Energy     |");
+		System.out.println("| Kinetic Energy       |");
+		System.out.println("| Distance Conversion  |");
+		System.out.println(" ---------------------- ");
 		Scanner inputScanner = new Scanner(System.in);
 		int x=0;
 		do {
@@ -36,9 +36,9 @@ public class PhysicsController
 		{
 			kineticEnergy();
 		}
-		if (answer.equals("NE"))
+		if (answer.equals("DC"))
 		{
-			netEnergy();
+			distanceConversion();
 		}
 		} while (x < 10);
 		start();
@@ -1867,10 +1867,67 @@ public class PhysicsController
 		}
 		
 	
-	public void netEnergy()
+	public void distanceConversion()
 	{
+		Scanner weightScanner = new Scanner(System.in);
+		System.out.println("What do you have?");
+		System.out.println(" --------------------------------");
+		System.out.println("| Imperial (miles, feet, inches) |");
+		System.out.println("| Metric (km, m, cm, mm)         |");
+		System.out.println("| Back                           |");
+		System.out.println(" --------------------------------");
+		int x = 0;
+		do {
+		String have = weightScanner.next();
 		
+		if (have.equals("I"))
+			{
+			DCI2();
+			}
+		if (have.equals("M"))
+		{
+			DCM2();
+		}
+		if(have.equals("B"))
+		{
+			start();
+		}
+		} while (x<3);
+		weightScanner.close();
 	}
+		public void DCI2()
+		{
+			
+		}
+		public void DCM2()
+		{
+			
+		}
+			public void DCM2M()
+			{
+				
+			}
+			public void DCM2I()
+			{
+				
+			}
+			public void DCI2I()
+			{
+				
+			}
+			public void DCI2M()
+			{
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	//--------Catch ERRORS------------
 	public boolean validInt(String example)
 	{

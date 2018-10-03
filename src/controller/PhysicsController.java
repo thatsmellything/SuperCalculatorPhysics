@@ -1159,8 +1159,300 @@ public class PhysicsController
 					
 	public void potentialEnergy()
 	{
+		Scanner weightScanner = new Scanner(System.in);
+		System.out.println("What do you have?");
+		System.out.println(" -----------------------");
+		System.out.println("| Imperial (lbs, ounces) |");
+		System.out.println("| Metric (kg, grams, mg) |");
+		System.out.println("| Back                   |");
+		System.out.println(" -----------------------");
+		int x = 0;
+		do {
+		String have = weightScanner.next();
 		
+		if (have.equals("I"))
+			{
+			PEImperial();
+			}
+		if (have.equals("M"))
+		{
+			PEMetric();
+		}
+		if(have.equals("B"))
+		{
+			start();
+		}
+		} while (x<3);
+		weightScanner.close();
 	}
+		public void PEMetric()
+		{
+			System.out.println("What do you have?");
+			System.out.println(" ------------");
+			System.out.println("| Kilograms  |");
+			System.out.println("| Grams      |");
+			System.out.println("| Milligrams |");
+			System.out.println("| Back       |");
+			System.out.println(" ------------");
+			Scanner KGM;
+			KGM = new Scanner(System.in);
+			int x = 0;
+			do {
+			String typeI = KGM.nextLine();
+			if (typeI.equals("K"))
+			{
+				PeK();
+			}
+			if (typeI.equals("G"))
+			{
+				PeG();
+			}
+			if (typeI.equals("M"))
+			{
+				PeM();
+			}
+			if (typeI.equals("B"))
+			{
+				potentialEnergy();
+			}
+			if (typeI.equals("R"))
+			{
+				start();
+			}
+			} while (x<3);
+			KGM.close();
+		}
+		public void PEImperial()
+		{
+			System.out.println("What do you have?");
+			System.out.println(" --------");
+			System.out.println("| Pounds |");
+			System.out.println("| Ounces |");
+			System.out.println("| Back   |");
+			System.out.println(" --------");
+			Scanner PandO;
+			PandO = new Scanner(System.in);
+			int x = 0;
+			do {
+			String typeI = PandO.nextLine();			
+			if (typeI.equals("P"))
+				{
+				PeLbs();
+				}
+			if (typeI.equals("O"))
+			{
+				PeOz();
+			}
+			if (typeI.equals("B"))
+			{
+				potentialEnergy();
+			}
+			if (typeI.equals("R"))
+			{
+				start();
+			}
+			} while (x<3);
+			PandO.close();
+			
+		}
+			public void PeK() 
+			{
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ---------------------------------");
+				System.out.println("| How many Kilograms do you have  |");
+				System.out.println(" ---------------------------------");
+				boolean validInputNum = false;
+				double KG = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						KG = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				
+				System.out.println(" -------------------------------------");
+				System.out.println("| How high (in meters) is the object? |");
+				System.out.println(" -------------------------------------");
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				double g = (9.8*speed);
+				double joules = (KG)*g; 
+				System.out.println(KG+ " Kilograms at " + speed + "m high, has " + joules +  " Joules of potential energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
+				System.out.println("RESTART?");
+				String restart;
+				int x = 0;
+				do {
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					PEMetric();
+				}
+				} while (x<3);
+				lbs.close();
+			}
+			public void PeG()
+			{
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ---------------------------------");
+				System.out.println("| How many Grams do you have?     |");
+				System.out.println(" ---------------------------------");
+				boolean validInputNum = false;
+				double KG = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						KG = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				
+				System.out.println(" -------------------------------------");
+				System.out.println("| How high (in meters) is the object? |");
+				System.out.println(" -------------------------------------");
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				double g = (9.8*speed);
+				double joules = (KG/1000)*g; 
+				System.out.println(KG+ " Grams at " + speed + "m high, has " + joules +  " Joules of potential energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
+				System.out.println("RESTART?");
+				String restart;
+				int x = 0;
+				do {
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					PEMetric();
+				}
+				} while (x<3);
+				lbs.close();
+			}
+			public void PeM()
+			{
+				Scanner lbs = new Scanner(System.in);
+				System.out.println(" ----------------------------------");
+				System.out.println("| How many Milligrams do you have? |");
+				System.out.println(" ----------------------------------");
+				boolean validInputNum = false;
+				double KG = 0;
+				while(!validInputNum)
+				{
+					try
+					{
+						KG = lbs.nextDouble();
+						validInputNum=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				
+				System.out.println(" -------------------------------------");
+				System.out.println("| How high (in meters) is the object? |");
+				System.out.println(" -------------------------------------");
+				boolean validInputSp = false;
+				double speed = 0;
+				while(!validInputSp)
+				{
+					try
+					{
+						speed = lbs.nextDouble();
+						validInputSp=true;
+					}
+					catch (InputMismatchException e)
+					{
+						System.out.println("Please enter a number");
+						lbs.nextLine();
+					}
+				}
+				double g = (9.8*speed);
+				double joules = (KG/1000000)*g; 
+				System.out.println(KG+ " Milligrams at " + speed + "m high, has " + joules +  " Joules of potential energy");
+				System.out.println(" ---------");
+				System.out.println("| Back    |");
+				System.out.println("| Restart |");
+				System.out.println(" ---------");
+				System.out.println("RESTART?");
+				String restart;
+				int x = 0;
+				do {
+				restart = lbs.next();
+				if (restart.equals("R"))
+				{
+					start();
+				}
+				if (restart.equals("B"))
+				{
+					PEMetric();
+				}
+				} while (x<3);
+				lbs.close();
+			}
+			public void PeLbs()
+			{
+				
+			}
+			public void PeOz()
+			{
+				
+			}
+		
 	
 	
 	

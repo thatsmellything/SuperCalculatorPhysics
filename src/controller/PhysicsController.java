@@ -76,6 +76,7 @@ public class PhysicsController
 		} while (x<10);
 		weightScanner.close();
 	}
+	
 		public void Metric()
 		{
 			System.out.println("What do you have?");
@@ -1987,6 +1988,7 @@ public class PhysicsController
 		}
 		
 	
+			
 	public void distanceConversion()
 	{
 		Scanner weightScanner = new Scanner(System.in);

@@ -2061,7 +2061,7 @@ public class PhysicsController
 			}while (x<10);
 			KGM.close();
 		}
-			public void DCME2()
+			public void DCMe2()
 			{
 				Scanner K2 = new Scanner(System.in);
 				System.out.println("What are you trying to find? (You have Meters)");
@@ -2259,7 +2259,42 @@ public class PhysicsController
 				}	
 				public void DCMe2I()
 				{
-						
+					System.out.println("What do you want to find?");
+					System.out.println(" ---------");
+					System.out.println("| Miles   |");
+					System.out.println("| Feet    |");
+					System.out.println("| Inches  |");
+					System.out.println("| Back    |");
+					System.out.println("| Restart |");
+					System.out.println(" ---------");
+					Scanner PandO;
+					PandO = new Scanner(System.in);
+					int x = 0;
+					do {
+					String typeI = PandO.nextLine();
+					
+					if (typeI.equals("M"))
+						{
+						DCMe2Mi();
+						}
+					if (typeI.equals("F"))
+					{
+						DCMe2Ft();
+					}
+					if (typeI.equals("I"))
+					{
+						DCMe2In();
+					}
+					if (typeI.equals("B"))
+					{
+						DCMe2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
+					}
+					}while (x<10);
+					PandO.close();	
 				}					
 					public void DCMe2Mi()
 					{
@@ -2470,7 +2505,42 @@ public class PhysicsController
 					}	
 				public void DCK2I()
 				{
-						
+					System.out.println("What do you want to find?");
+					System.out.println(" ---------");
+					System.out.println("| Miles   |");
+					System.out.println("| Feet    |");
+					System.out.println("| Inches  |");
+					System.out.println("| Back    |");
+					System.out.println("| Restart |");
+					System.out.println(" ---------");
+					Scanner PandO;
+					PandO = new Scanner(System.in);
+					int x = 0;
+					do {
+					String typeI = PandO.nextLine();
+					
+					if (typeI.equals("M"))
+						{
+						DCK2Mi();
+						}
+					if (typeI.equals("F"))
+					{
+						DCK2Ft();
+					}
+					if (typeI.equals("I"))
+					{
+						DCK2In();
+					}
+					if (typeI.equals("B"))
+					{
+						DCK2();
+					}
+					if (typeI.equals("R"))
+					{
+						start();
+					}
+					}while (x<10);
+					PandO.close();		
 				}					
 					public void DCK2Mi()
 					{
@@ -2486,16 +2556,130 @@ public class PhysicsController
 					}
 			public void DCMM2()
 			{
-				
+				Scanner K2 = new Scanner(System.in);
+				System.out.println("What are you trying to find? (You have Kilometers)");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				int x = 0;
+				do {
+				String Kilo2 = K2.nextLine();
+				if (Kilo2.equals("I"))
+				{
+					DCMM2I();
+				}
+				if (Kilo2.equals("M"))
+				{
+					DCMM2M();
+				}
+				if (Kilo2.equals("B"))
+				{
+					DCM2();
+				}
+				if  (Kilo2.equals("R"))
+				{
+					start();
+				}
+				}while (x<10);
+				K2.close();
 			}
+				public void DCMM2I()
+				{
+					
+				}
+					public void DCMM2Mi()
+					{
+							
+					}
+					public void DCMM2Ft()
+					{
+							
+					}
+					public void DCMMa2In()
+					{
+							
+					}
+				public void DCMM2M()
+				{
+					
+				}
+					public void DMM2K()
+					{
+						
+					}
+					public void DMM2Me()
+					{
+						
+					}
+					public void DMM2C()
+					{
+						
+					}
 			public void DCC2()
 			{
-				
+				Scanner K2 = new Scanner(System.in);
+				System.out.println("What are you trying to find? (You have Kilometers)");
+				System.out.println(" -----------------------");
+				System.out.println("| Imperial (lbs, ounces) |");
+				System.out.println("| Metric (kg, grams, mg) |");
+				System.out.println("| Back                   |");
+				System.out.println(" -----------------------");
+				int x = 0;
+				do {
+				String Kilo2 = K2.nextLine();
+				if (Kilo2.equals("I"))
+				{
+					DCC2I();
+				}
+				if (Kilo2.equals("M"))
+				{
+					DCC2M();
+				}
+				if (Kilo2.equals("B"))
+				{
+					DCM2();
+				}
+				if  (Kilo2.equals("R"))
+				{
+					start();
+				}
+				}while (x<10);
+				K2.close();
 			}
-			public void DCMe2()
-			{
-				
-			}
+				public void DCC2M()
+				{
+					
+				}
+					public void DCC2K()
+					{
+						
+					}
+					public void DCC2Me()
+					{
+						
+					}
+					public void DCC2MM()
+					{
+						
+					}
+				public void DCC2I()
+				{
+					
+				}
+					public void DCC2Mi()
+					{
+							
+					}
+					public void DCC2Ft()
+					{
+							
+					}
+					public void DCC2In()
+					{
+							
+					}
 			
 					
 					

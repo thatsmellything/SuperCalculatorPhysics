@@ -2,8 +2,9 @@ package controller;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
+
+
 
 public class PhysicsController
 {
@@ -39,6 +40,10 @@ public class PhysicsController
 		if (answer.equals("DC"))
 		{
 			distanceConversion();
+		}
+		if (answer.equals("DEV"))
+		{
+			DEV();
 		}
 		} while (x < 10);
 		start();
@@ -2743,6 +2748,10 @@ public class PhysicsController
 			JOptionPane.showMessageDialog(null, "Type in a boolean value IE true or false ");
 		}
 		return isValid;
+	}
+	public void DEV()
+	{
+		JOptionPane.showMessageDialog(null, "Imperial (lbs, ounces) Metric (kg, grams, mg) Back");
 	}
 }
 

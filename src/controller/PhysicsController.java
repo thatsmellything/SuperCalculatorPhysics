@@ -2609,20 +2609,134 @@ public class PhysicsController
 				}
 					public void DMM2K()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Millimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Millimeters = " + speed/1000/100/10 + " Kilometers");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 					public void DMM2Me()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Millimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Millimeters = " + speed/100/10 + " Meters");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 					public void DMM2C()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Millimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Millimeters = " + speed/10 + " Centimeters");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 			public void DCC2()
 			{
 				Scanner K2 = new Scanner(System.in);
-				System.out.println("What are you trying to find? (You have Kilometers)");
+				System.out.println("What are you trying to find? (You have Centimeters)");
 				System.out.println(" -----------------------");
 				System.out.println("| Imperial (lbs, ounces) |");
 				System.out.println("| Metric (kg, grams, mg) |");
@@ -2656,15 +2770,129 @@ public class PhysicsController
 				}
 					public void DCC2K()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Centimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Centimeters = " + speed/1000/100 + " Kilometers");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 					public void DCC2Me()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Centimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Centimeters = " + speed/100 + " Meters");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 					public void DCC2MM()
 					{
-						
+						Scanner lbs = new Scanner(System.in);
+						System.out.println(" ----------------------------------");
+						System.out.println("| How many Centimeters do you have? |");
+						System.out.println(" ----------------------------------");
+						boolean validInputSp = false;
+						double speed = 0;
+						while(!validInputSp)
+						{
+							try
+							{
+								speed = lbs.nextDouble();
+								validInputSp=true;
+							}
+							catch (InputMismatchException e)
+							{
+								System.out.println("Please enter a number");
+								lbs.nextLine();
+							}
+						}
+						System.out.println(speed+ " Centimeters = " + speed*10 + " Millimeters");
+						System.out.println(" ---------");
+						System.out.println("| Back    |");
+						System.out.println("| Restart |");
+						System.out.println(" ---------");
+						System.out.println("RESTART?");
+						String restart;
+						int x =0;
+						do {
+						restart = lbs.next();
+						if (restart.equals("R"))
+						{
+							start();
+						}
+						if (restart.equals("B"))
+						{
+							DCK2M();
+						}
+						}while(x<1);
+						lbs.close();
 					}
 				public void DCC2I()
 				{

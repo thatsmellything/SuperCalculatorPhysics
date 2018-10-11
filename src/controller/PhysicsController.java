@@ -3294,19 +3294,11 @@ public class PhysicsController
 			{
 				Scanner K2 = new Scanner(System.in);
 				System.out.println("What are you trying to find? (You have Centimeters)");
-<<<<<<< HEAD
 				System.out.println(" ---------------------------------------");
 				System.out.println("| Imperial (Miles, Yards, Feet, Inches) |");
 				System.out.println("| Metric (km, cm, mm)                   |");
 				System.out.println("| Back                                  |");
 				System.out.println(" ---------------------------------------");
-=======
-				System.out.println(" -----------------------");
-				System.out.println("| Imperial (lbs, ounces) |");
-				System.out.println("| Metric (kg, grams, mg) |");
-				System.out.println("| Back                   |");
-				System.out.println(" -----------------------");
->>>>>>> 33c3de6abb7e16480529197d5d541948b71941ee
 				int x = 0;
 				do {
 				String Kilo2 = K2.nextLine();

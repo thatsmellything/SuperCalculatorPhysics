@@ -2024,7 +2024,27 @@ public class PhysicsController
 	}
 		public void DCI2()
 		{
+			System.out.println(" -----------------------------------------------------------------");
+			System.out.println("| I am sorry but this feature is still under construction.        |");
+			System.out.println("| All other functions are completed and working besides this one. |");
+			System.out.println("| Please press 'B' then 'Enter' to go back.                       |");
+			System.out.println(" -----------------------------------------------------------------");
+			Scanner KGM;
+			KGM = new Scanner(System.in);
+			int x = 0;
+			do {
+			String typeI = KGM.nextLine();
 			
+			if (typeI.equals("B"))
+			{
+				distanceConversion();
+			}
+			if (typeI.equals("R"))
+			{
+				start();
+			}
+			}while (x<10);
+			KGM.close();
 		}
 		public void DCM2()
 		{
@@ -2059,7 +2079,7 @@ public class PhysicsController
 			}
 			if (typeI.equals("B"))
 			{
-				weightConversion();
+				distanceConversion();
 			}
 			if (typeI.equals("R"))
 			{

@@ -522,7 +522,7 @@ public class PhysicsController
 				}
 				public void G2M()
 				{
-					System.out.println("Whatare you trying to find? (You have Grams)");
+					System.out.println("What are you trying to find? (You have Grams)");
 					System.out.println(" ------------");
 					System.out.println("| Kilograms  |");
 					System.out.println("| Milligrams |");
